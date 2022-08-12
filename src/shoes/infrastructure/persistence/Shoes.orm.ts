@@ -21,8 +21,8 @@ export class ShoesORM{
     @Column({name: 'store_address', type: 'varchar'})
     store_address: string;
 
-    @Column({name: 'release_date', type: 'timestamptz'})
-    date_time_with_timezone: Date;
+    @Column({name: 'release_date'})
+    release_date: Date;
 
     @Column({name: 'imagen', type: 'varchar'})
     imagen: string;
