@@ -2,7 +2,7 @@
 
 [![made-with-typeScript](https://img.shields.io/badge/Made%20with-NestJS-1f425f.svg)](https://nestjs.com/) [![made-with-typeScript](https://img.shields.io/badge/Made%20with-TypeScript-7e98e6.svg)](https://www.typescriptlang.org/) [![made-with-typeScript](https://img.shields.io/badge/Made%20with-SQLite-6baf6f.svg)](https://www.sqlite.org/index.html) 
 
-SearchShoesBackend es un servicio de backend desarrollado mediante el intento del uso de la Arquitectura Hexagonal y desarrollado bajo el framework NestJs. Este servicio fue desarrollado para que fuera consumido por las aplicacion web **[SearchShoesFrontend](https://github.com/SARKOT07/SearchShoesFrontend.git)**
+SearchShoesBackend es un servicio de backend desarrollado mediante el intento del uso de la Arquitectura Hexagonal y desarrollado bajo el framework NestJs. Este servicio fue desarrollado para que fuera consumido por las aplicacion web **[SearchShoesFrontend](https://github.com/SARKOT07/SearchShoesFrontend.git)**, además de usar sqlite para los datos en persistencia.
 
 ## ℹ️ Pre-requisitos
 
@@ -14,7 +14,7 @@ SearchShoesBackend es un servicio de backend desarrollado mediante el intento de
 Clonar repositorio:
 
 ```
-$ git clone https://github.com/Code-Rebels-UCAB/MyOnlineDoctorApi.git
+$ git clone https://github.com/SARKOT07/SearchShoesBackend.git
 ```
 
 ### ⏯️ Ejecución de la App
