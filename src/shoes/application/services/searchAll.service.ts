@@ -8,7 +8,8 @@ export class SearchAll
     ) {}
 
     async execute() {
-
+            //Servicio donde consume por injection de dependencias la interfaz del repositorio de los shoes
+            //Servicio que busca todo los zapatos
             const shoes = await this.repositoryShoes.getAllShoes();
 
             return shoes;

@@ -8,6 +8,7 @@ import { ShoesORM } from "../persistence/Shoes.orm";
 
 @Injectable()
 export class RepositoryShoes implements IRepositoryShoes {
+//Adaptador con typeORM que implementa el puerto de la capa de aplicacion (interfaz de IRepository Shoes)
   constructor(
     @InjectRepository(ShoesORM)
     private readonly _shoesRepository: Repository<ShoesORM>,

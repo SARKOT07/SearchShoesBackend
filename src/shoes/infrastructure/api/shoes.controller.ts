@@ -1,12 +1,8 @@
 import {
-    Body,
     Controller,
     Get,
     Inject,
-    Param,
-    Put,
     Query,
-    UseGuards,
   } from '@nestjs/common';
 import { SearchAll } from '../../../shoes/application/services/searchAll.service';
 import { SearchBrand } from '../../../shoes/application/services/searchBrand.service';
@@ -28,31 +24,39 @@ export class ShoesController {
     @Inject(SearchStore)
     private readonly searchStore: SearchStore,
   ) {}
-  
-  @Get('filter/all')
+
+  //http://localhost:3000/api/shoes/filter/all
+  @Get('filter/all') 
   async getAll() {
     const shoes = await this.searchAll.execute();
     return shoes;
   }
 
+  //http://localhost:3000/api/shoes/filter/brand?brand=adidas
+  //brand:(Nike, Adidas y Crocs)
   @Get('filter/brand')
   async getByBrand(@Query('brand') brand: string) {
     const shoes = await this.searchBrand.execute(brand);
     return shoes;
   }
 
+  //http://localhost:3000/api/shoes/filter/model?model=venture runner
+  //model:(ADILETTE AQUA SLIDES, ACLASSIC HEMP LEAF CLOG, SUPERSTAR SHOES y Venture Runner)
   @Get('filter/model')
   async getByModel(@Query('model') model: string) {
     const shoes = await this.searchModel.execute(model);
     return shoes;
   }
 
+  //http://localhost:3000/api/shoes/filter/releaseDate?date=2022-09-12
   @Get('filter/releaseDate')
   async getByReleaseDate(@Query('date') date: string) {
     const shoes = await this.searchReleaseDate.execute(date);
     return shoes;
   }
 
+  //http://localhost:3000/api/shoes/filter/store?store=nikeStore
+  //store name:(NikeStore, AdidasStore y CrocsStore)
   @Get('filter/store')
   async getByStores(@Query('store') store: string) {
     const shoes = await this.searchStore.execute(store);

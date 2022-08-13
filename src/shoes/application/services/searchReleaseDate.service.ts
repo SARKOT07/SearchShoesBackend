@@ -8,7 +8,8 @@ export class SearchReleaseDate
     ) {}
 
     async execute(data: string) {
-
+        //Servicio donde consume por injection de dependencias la interfaz del repositorio de los shoes
+        //Servicio que busca los zapatos por la fecha de lanzamiento
         const shoes = await this.repositoryShoes.getByReleaseDateShoes(data);
 
         return shoes;
